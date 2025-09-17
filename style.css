@@ -1,79 +1,330 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background: linear-gradient(#e2e2e2 0%, #c5d0e2 100%);
-    color: #000000;
-    line-height: 2.5;
-    min-height: 96.5vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(#f5f7fa 0%, #e4e8ed 100%);
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+    padding: 20px;
 }
 
 .container {
     max-width: 1000px;
-    margin: 25px auto;
+    margin: 0 auto;
     padding: 30px;
-    background: rgb(230, 230, 230);
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
+    background: white;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    margin-bottom: 40px;
 }
 
 h1 {
     color: #1d3146;
     margin-bottom: 10px;
-    font-size: 48px;
-}
-
-header {
-    text-align: center;
-    margin-bottom: 50px;
+    font-size: 2.8rem;
+    font-weight: 700;
 }
 
 .tagline {
     color: #697575;
-    font-style: italic;
-    font-size: 20px;
+    font-size: 1.3rem;
+    font-weight: 300;
 }
 
+/* Divider */
 .divider {
     height: 2px;
-    background: rgb(177, 53, 4);
-    margin: 20px 0;
+    background: linear-gradient(to right, transparent, #db680a, transparent);
+    margin: 30px 0;
 }
 
+/* Section Styles */
 .section {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 h2 {
     color: #db680a;
     border-left: 5px solid #3498db;
     padding-left: 15px;
-    margin-top: 0;
+    margin: 0 0 15px 0;
+    font-size: 1.8rem;
 }
 
-ul {
-    padding-left: 15px;
-}
-
+/* Highlight Box */
 .highlight {
-    background-color: #eafffd;
-    margin: 0 auto;
-    padding: 3px 25px;
+    background-color: #f8f9fa;
+    padding: 25px;
+    border-radius: 10px;
+    margin: 0 0 15px 15px;
+}
 
+.justified-text {
+    text-align: justify;
+}
+
+/* Skills Section */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+}
+
+.skills-list li {
+    background: linear-gradient(145deg, #1d3146, #2a4674);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.skills-list li:hover {
+    transform: translateY(-3px);
+}
+
+/* Project Card */
+.project-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #eaeaea;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.project-header {
+    background: linear-gradient(90deg, #1d3146, #2a4674);
+    color: white;
+    padding: 20px;
+}
+
+.project-header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.project-content {
+    padding: 25px;
+}
+
+.project-description {
+    text-align: justify;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.tech-tag {
+    background: #eef5ff;
+    color: #1d3146;
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: 1px solid #d0deff;
+}
+
+.code-preview {
+    background: #2d2d2d;
+    color: #f8f8f2;
+    padding: 20px;
     border-radius: 8px;
-    width: 90%;
+    font-family: 'Fira Code', 'Monaco', 'Cascadia Code', monospace;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    max-height: 200px;
+    overflow: auto;
+    margin: 20px 0;
+    border: 1px solid #444;
 }
 
-a {
-    color: #0d47b3;
+.code-keyword {
+    color: #f92672;
+}
+
+.code-function {
+    color: #a6e22e;
+}
+
+.code-comment {
+    color: #75715e;
+}
+
+.code-param {
+    color: #fd971f;
+}
+
+.project-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #1d3146;
+    font-weight: 600;
+    padding: 10px 20px;
+    background: #f0f5ff;
+    border-radius: 30px;
     text-decoration: none;
+    transition: all 0.3s ease;
+    border: 1px solid #d0deff;
 }
 
-a:hover {
+.project-link:hover {
+    background: #1d3146;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(29, 49, 70, 0.2);
+}
+
+/* Education Section */
+.education-item {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.education-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.education-item h3 {
+    color: #1d3146;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+}
+
+.education-detail {
+    color: #666;
+    font-style: italic;
+}
+
+/* Contact Section */
+.contact-section {
+    text-align: center;
+}
+
+.contact-details {
+    margin-top: 20px;
+}
+
+.contact-details p {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.contact-details a {
+    color: #1d3146;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-details a:hover {
+    color: #db680a;
     text-decoration: underline;
 }
 
+/* CTA Button */
+.center-button {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(90deg, #1d3146, #2a4674);
+    color: white;
+    padding: 14px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(29, 49, 70, 0.3);
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(29, 49, 70, 0.4);
+}
+
+/* Footer */
 footer {
     text-align: center;
-    margin: auto;
+    margin-top: 40px;
     color: #697575;
-    font-size: 16px;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    .container {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 2.2rem;
+    }
+    
+    .tagline {
+        font-size: 1.1rem;
+    }
+    
+    .project-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .project-link {
+        justify-content: center;
+    }
+    
+    .skills-list {
+        justify-content: center;
+    }
+    
+    .code-preview {
+        font-size: 0.8rem;
+        padding: 15px;
+    }
 }
