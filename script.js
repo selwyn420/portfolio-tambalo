@@ -1,7 +1,7 @@
 // Portfolio JavaScript
 document.addEventListener('DOMContentLoaded', function() {
     // Smooth scrolling for navigation links
-    const navLinks = document.querySelectorAll('a[href^="#"]');
+    const navLinks = document.querySelectorAll('.navbar a');
     
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
@@ -80,10 +80,4 @@ document.addEventListener('DOMContentLoaded', function() {
             this.style.transform = 'translateY(0) scale(1)';
         });
     }
-    
-    // Console greeting (for fun)
-    console.log('%cHello there! Thanks for checking out my portfolio.', 
-                'color: #1d3146; font-size: 16px; font-weight: bold;');
-    console.log('%cFeel free to explore the code or get in touch if you have any questions!', 
-                'color: #db680a; font-size: 14px;');
 });

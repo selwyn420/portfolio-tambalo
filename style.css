@@ -7,11 +7,45 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(#f5f7fa 0%, #e4e8ed 100%);
+    background: linear-gradient(#1d3146 0%, #1d3138 100%);
     color: #333;
     line-height: 1.6;
     min-height: 100vh;
     padding: 20px;
+}
+
+/* Navbar */
+.navbar {
+    background: #1d3146;
+    padding: 12px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.navbar li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 10px;
+    border-radius: 5px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.navbar li a:hover,
+.navbar li a.active {
+    background: #fff;
+    color: #1d3146;
 }
 
 .container {
@@ -249,13 +283,13 @@ h2 {
 }
 
 .contact-details a {
-    color: #1d3146;
+    color: #000000;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .contact-details a:hover {
-    color: #db680a;
+    color: #1d3146;
     text-decoration: underline;
 }
 
